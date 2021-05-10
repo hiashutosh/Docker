@@ -1,0 +1,25 @@
+version: '3.1'
+services:
+        db:
+                image: mariadb:latest
+                restart: always
+                environment:
+                        MYSQL_DATABASE: wordpressdb
+                        MYSQL_USER: ashutosh
+                        MYSQL_PASSWORD: ashu1234
+                        MYSQL_RANDOM_ROOT_PASSWORD: pass1234
+                volumes:
+                        - ./database:/var/lib/mysql
+
+        wordpress:
+                image: wordpress:latest
+                restart: always
+                ports:
+                        - 8080:80
+                environment:
+                        WORDPRESS_DB_HOST: db
+                        WORDPRESS_DB_USER: ashutosh
+                        WORDPRESS_DB_PASSWORD: ashu1234
+                        WORDPRESS_DB_NAME: wordpressdb
+                volumes:
+                        - ./html:/var/www.html
