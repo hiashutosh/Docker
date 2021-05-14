@@ -26,7 +26,7 @@ sudo docker run -td --name wordpress \
 --net my-net wordpress:5.7.1-fpm-alpine
 
 sudo docker run -td --name nginx-web \
--p 80:80 \
+-p 8080:80 \
 -v /home/ubuntu/wordpress:/var/www/html \
 -v /home/ubuntu/nginx:/etc/nginx/conf.d \
 --net my-net nginx:1.20.0-alpine
