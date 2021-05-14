@@ -1,12 +1,12 @@
 #!/bin/bash
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install docker.io -y
+sudo apt-get install docker.io git -y
 sudo usermod -aG root ubuntu
 sudo usermod -aG docker ubuntu
-mkdir wordpress database
-
-
+mkdir wordpress database nginx
+git clone https://github.com/hiashutosh/centralgit.git
+cp Docker/nginx/nginx.conf nginx/
 sudo docker network create my-net
 
 sudo docker run -td --name db \
