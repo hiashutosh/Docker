@@ -32,7 +32,7 @@ sudo docker run -td --name nginx-web \
 --net my-net nginx:1.20.0-alpine
 
 sudo ufw allow 8080/tcp
-sudo ufw enable -y
+sudo ufw enable 
 sudo ufw reload
 
 
