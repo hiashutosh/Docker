@@ -5,7 +5,7 @@ sudo apt-get install docker.io git -y
 sudo usermod -aG root ubuntu
 sudo usermod -aG docker ubuntu
 mkdir wordpress database nginx
-git clone https://github.com/hiashutosh/centralgit.git
+git clone https://github.com/hiashutosh/Docker.git
 cp Docker/nginx/nginx.conf nginx/
 sudo docker network create my-net
 
