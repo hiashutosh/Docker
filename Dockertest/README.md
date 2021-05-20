@@ -42,3 +42,6 @@ to initialize docker swarm:
 to run this cluster:
 
 	docker stack deploy -c wp-replicated.yml my_stack
+we can further scale 
+
+	docker service scale mystack_db=<replicas> mystack_wordpress=<replicas>
