@@ -37,6 +37,8 @@ to deploy this cluster we need to use docker stack deploy command
 but perquisite is that docker swarm should already be initialized
 
 to initialize docker swarm:
+
 	docker swarm init
 to run this cluster:
+
 	docker stack deploy -c wp-replicated.yml my_stack
