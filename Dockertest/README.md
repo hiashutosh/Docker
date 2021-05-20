@@ -24,8 +24,8 @@ Docker image pull command
 # For file Wordpress-compose-secret.yml
 
 ## create secret files with base64 encoded (replace password with desired password)
-  echo password | base64
-  echo pass1234 | base64
+ 	echo password | base64
+  	echo pass1234 | base64
 copy output and paste in another files lets name it mysql_password.txt and mysql_root_password.txt
-  docker secret create db_password mysql_password
-  docker secret create root_password mysql_password
+ 	docker secret create db_password mysql_password
+ 	docker secret create root_password mysql_password
